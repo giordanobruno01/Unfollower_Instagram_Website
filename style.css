@@ -1,0 +1,46 @@
+
+body>body{
+    
+    background-color: aliceblue;
+
+}
+body{
+    background-color: rgba(128, 128, 128, 0.138);
+}
+body>div{
+    padding: 100px;
+    
+}
+input{
+    display: block;
+    
+}
+
+#youtube{
+    margin: 10%;
+    display: block;
+   text-align: center;
+   border: 1px solid black;
+}
+
+#fileUpload{
+    padding: 20px;
+    border: 1px solid black;
+    display: block;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+#result-box{
+    border: 1px solid black ;
+}
+footer{
+    background-color: rgba(0, 255, 255, 0.118);
+    border: 1px solid black;
+    padding: 10px;
+}
+footer>div{
+    text-align: center;
+    padding: 8px;
+}
