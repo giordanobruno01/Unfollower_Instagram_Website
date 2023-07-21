@@ -1,46 +1,61 @@
-
-body>body{
-    
-    background-color: aliceblue;
-
+main {
+  background-color: white;
+  max-width: 1000px;
+  min-width: 280px;
+  margin: auto;
+  padding: 10px;
 }
-body{
-    background-color: rgba(128, 128, 128, 0.138);
-}
-body>div{
-    padding: 100px;
-    
-}
-input{
-    display: block;
-    
+body {
+  background-color: rgba(128, 128, 128, 0.106);
+  flex-direction: column;
 }
 
-#youtube{
-    margin: 10%;
-    display: block;
-   text-align: center;
-   border: 1px solid black;
+#youtube {
+  padding-top: 8px;
+  background-color: rgba(255, 0, 0, 0.199);
+  margin: 30px auto 30px auto;
+  position: relative;
+  padding-bottom: 50%;
+}
+iframe {
+  background-color: rgb(2, 1, 0);
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 80%;
+  height: 85%;
 }
 
-#fileUpload{
-    padding: 20px;
-    border: 1px solid black;
-    display: block;
-    width: 30%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
+#fileUpload {
+  padding: 20px;
+  border: 1px solid black;
+  width: 30vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
 }
-#result-box{
-    border: 1px solid black ;
+#result-box {
+  border: 1px solid black;
 }
-footer{
-    background-color: rgba(0, 255, 255, 0.118);
-    border: 1px solid black;
-    padding: 10px;
+footer {
+  background-color: rgba(185, 212, 212, 0.221);
+  padding: 5px;
+  width: 100%;
+  margin-top: auto;
 }
-footer>div{
-    text-align: center;
-    padding: 8px;
+footer > div {
+  text-align: center;
+  padding: 8px;
+}
+#instagram_id {
+  width: 40px;
+}
+#youtube_id {
+  margin-bottom: -1px;
+  width: 30px;
+  margin-left: auto;
+  margin-right: 10px;
+}
+#linkedin_id {
+  width: 50px;
 }

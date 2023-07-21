@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header>
+    
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Unfollowers for Instagram</a>
@@ -29,17 +29,18 @@
                 </div>
             </div>
         </nav>
-    </header>
+  
 
-    <body>
+    <main >
 
         <div id="youtube">
-            <p>video here</p>
-            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/oSRoNBJQ2KQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/oSRoNBJQ2KQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
 
         <div id="fileUpload">
-            <input type="file" onchange="convertetFollowers()" name="followers" id="">
+            <!-- <input type="file" onchange="convertetFollowers()" name="followers" id=""> -->
+            <input type="file" name="filea" size="62" onchange="checkExt(this.value);">
             <input type="file" onchange="convertFollowing()" name="following">
             <input type="submit" value="Check Unfollowers">
 
@@ -51,7 +52,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
             crossorigin="anonymous"></script>
-    </body>
+    </main>
     <footer>
         <div>
             <a href="https://www.youtube.com/channel/UCIS9Ju9ve0KDRXGsm_osM8Q?sub_confirmation=1" target="_blank"><img
