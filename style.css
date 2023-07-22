@@ -34,8 +34,13 @@ iframe {
   margin-right: auto;
   margin-bottom: 60px;
 }
+#following,#followers{
+  margin-bottom: 20px;
+}
 #result-box {
   border: 1px solid black;
+  padding: 50px;
+  
 }
 footer {
   background-color: rgba(185, 212, 212, 0.221);

@@ -8,6 +8,7 @@
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
     <title>Unfollower Instagram</title>
 </head>
 
@@ -35,13 +36,17 @@
 
         <div id="youtube">
             
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/oSRoNBJQ2KQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/oSRoNBJQ2KQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
         </div>
 
         <div id="fileUpload">
             <!-- <input type="file" onchange="convertetFollowers()" name="followers" id=""> -->
-            <input type="file" name="filea" onchange="checkExt(this.value);">
-            <input type="file" name="fileb"  onchange="checkExt(this.value);">
+            <label for="followers">followers_1.json</label>
+            <input type="file" id="followers" name="followers" onchange="checkExt(this.value);">
+            <label for="following">following.json</label>
+            <input type="file" id="following" 
+             name="following"  onchange="checkExt(this.value);">
+             
             <button onclick="compare()">Check Unfollowers</button>
             
 
