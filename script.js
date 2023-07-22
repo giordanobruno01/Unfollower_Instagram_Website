@@ -6,6 +6,7 @@ var followersLength;
 var followingLength;
 
 function checkExt(filename) {
+ 
   if (!filename.match(/\.json$/)) {
     alert(
       "Only JSON files are supported. It is recommended to download from Instagram a .json file."
@@ -14,18 +15,18 @@ function checkExt(filename) {
 }
 
 function uploadFile() {
-  let file = document.querySelector("#filea");
+  let file = document.querySelector("#following");
 }
 
 function extraction() {
-    var iFollow = document.getElementById("following");
-    var followMe = document.getElementById("followers");
-    iFollow = require(iFollow);
-    followMe = require(followMe);
-    console.log(iFollow)
+    // var iFollow = document.getElementById("following");
+    // var followMe = document.getElementById("followers");
+    // iFollow = require(iFollow);
+    // followMe = require(followMe);
+    // console.log(iFollow)
 
-//   var iFollow = require("./following.json");
-//   var followMe = require("./followers_1.json");
+  var iFollow = require("./following.json");
+  var followMe = require("./followers_1.json");
 
   followingLength = iFollow.relationships_following.length;
 
@@ -57,8 +58,9 @@ function compare() {
   }
   console.log(notFollowingBack[0]);
 
-  // const string = JSON.stringify(notFollowingBack, null, 4);
+//   document.getElementById("unfollowers-list").innerHTML = "notFollowingBack[0]";
+document.getElementById("unfollowers-list").innerHTML = JSON.stringify(notFollowingBack)
 
-  // document.getElementById("unfollowers-list").innerHTML = "notFollowingBack[0]";
 }
-compare();
+
+compare()
