@@ -1,13 +1,14 @@
 main {
   background-color: white;
   max-width: 1000px;
-  min-width: 390px;
+  min-width: 380px;
   margin: auto;
   padding: 10px;
 }
 body {
   background-color: rgba(128, 128, 128, 0.106);
   flex-direction: column;
+  
 }
 
 #youtube {
@@ -29,7 +30,7 @@ iframe {
 
 #fileUpload {
   padding: 20px;
-  border: 1px solid black;
+  
   width: 30vh;
   margin-left: auto;
   margin-right: auto;
