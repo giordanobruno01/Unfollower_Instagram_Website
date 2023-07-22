@@ -101,7 +101,7 @@ function compare() {
   //   document.getElementById("unfollowers-list-link").innerHTML = notFollowingBackLink[index];
     
   // }
-  var l  = "Click to Unfollow <br>";
+  var l  = "Click the link to Unfollow <br>";
   for (let index = 0; index < notFollowingBack.length; index++) {
     
     l = l + ( "<a href="+notFollowingBackLink[index]+" target="+ "_blank> "+notFollowingBack[index]+" </a> <br>");  
