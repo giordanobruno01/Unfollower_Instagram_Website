@@ -105,6 +105,11 @@ function compare() {
       notFollowingBackLink.push(followingLink[index]);
     }
   }
+  if(notFollowingBack.length==0){
+    document.getElementById("count").innerHTML =
+      "The files are not matching, check if they are correct as following <strong>following.json<storng> or <strong>followers_1.json<strong>";
+    return;
+  }
   // for (let index = 0; index < notFollowingBack.length; index++) {
   //   document.getElementById("unfollowers-list").innerHTML = notFollowingBack[index];
   //   document.getElementById("unfollowers-list-link").innerHTML = notFollowingBackLink[index];

@@ -7,15 +7,13 @@ main {
 }
 body {
   background-color: rgba(128, 128, 128, 0.106);
-  flex-direction: column;
+  
 }
 
 #youtube {
   background-color: rgba(255, 0, 0, 0.199);
   padding: 20px;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 #stepsvideo {
