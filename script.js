@@ -16,13 +16,11 @@ function checkExt(event) {
     );
     return;
   }
-  console.log(file["name"]);
+ 
   if (file["name"] != "followers_1.json" && file["name"] != "following.json"){
     alert("Only files named as following.json or followers_1.json allowed, check again.");
     return;
   }
-
-  
 
   readJsonFile(file)
     .then((jsonData) => {
@@ -116,12 +114,14 @@ function compare() {
   //   document.getElementById("unfollowers-list-link").innerHTML = notFollowingBackLink[index];
 
   // }
-  var l =
-    notFollowingBack.length +
-    " Instagram User do not follow you back <br><br>Click the link to Unfollow <br><br>";
-  for (let index = 0; index < notFollowingBack.length; index++) {
-    l =
-      l +
+  var l1 = "";
+  var l2 = "";
+  
+
+   c = notFollowingBack.length +" Instagram users do not follow you back <br><br>Click the link to Unfollow them<br><br>";
+  for (let index = 0; index < (notFollowingBack.length)/2; index++) {
+    l1 =
+      l1 +
       ("<a href=" +
         notFollowingBackLink[index] +
         " target=" +
@@ -129,8 +129,25 @@ function compare() {
         notFollowingBack[index] +
         " </a> <br>");
   }
-  document.getElementById("unfollowers-list").innerHTML =
-    l + "<br><br>Reload to check again, thanks for testing the website <br>";
+  for (let index = notFollowingBack.length / 2; index < notFollowingBack.length;index++) {
+    l2 =
+      l2 +
+      ("<a href=" +
+        notFollowingBackLink[index] +
+        " target=" +
+        "_blank> " +
+        notFollowingBack[index] +
+        " </a> <br>");
+  }
+  d = "<br>Reload to check again, thanks for testing the website <br>";
+
+ 
+  
+  document.getElementById("count").innerHTML = c
+    document.getElementById("unfollowers-listLeft").innerHTML = l1
+    document.getElementById("unfollowers-listRight").innerHTML = l2
+    document.getElementById("final").innerHTML = d
+      
 
   // document.getElementById("unfollowers-list").innerHTML =
   //   '<button type="button" onClick="window.location.reload()">Reload</button>';
