@@ -1,4 +1,4 @@
-var iFollow ;
+var iFollow;
 var followMe;
 var following = [];
 var followers = [];
@@ -16,6 +16,14 @@ function checkExt(event) {
     );
     return;
   }
+  console.log(file["name"]);
+  if (file["name"] != "followers_1.json" && file["name"] != "following.json"){
+    alert("Only files named as following.json or followers_1.json allowed, check again.");
+    return;
+  }
+
+  
+
   readJsonFile(file)
     .then((jsonData) => {
       if (file["name"] == "followers_1.json") {
@@ -39,10 +47,17 @@ function checkExt(event) {
           );
         }
       }
+      // else if (
+      //   file["name"] != "following.json" &&
+      //   file["name"] != "followers_1.json"
+      // ) {
+      //   document.getElementById("unfollowers-list").innerHTML =
+      //     'The <strong>.json</strong> file does not match the names <strong>following.json</strong> or <strong>followers_1.json</strong><br><button type="button" onClick="window.location.reload()">Reload to Upload</button>';
+      // }
     })
     .catch((error) => {
       alert("Error reading" + error.message);
-    }); 
+    });
   // if(following.length!=0 && followers.length !=0){
   //   compare()
   // }
@@ -65,25 +80,25 @@ const readJsonFile = (file) => {
   });
 };
 
-function extraction() {
+// function extraction() {
 
-  // followingLength = iFollow.relationships_following.length;
-  followersLength = followMe.length;
+// followingLength = iFollow.relationships_following.length;
+// followersLength = followMe.length;
 
-  // for (let index = 0; index < followingLength; index++) {
-  //   following.push(
-  //     iFollow.relationships_following[index].string_list_data[0].value
-  //   );
+// for (let index = 0; index < followingLength; index++) {
+//   following.push(
+//     iFollow.relationships_following[index].string_list_data[0].value
+//   );
 
-  //   followingLink.push(
-  //     iFollow.relationships_following[index].string_list_data[0].href
-  //   );
-  // }
-  for (let index = 0; index < followersLength; index++) {
-    followers.push(followMe[index].string_list_data[0].value);
-    followersLink.push(followMe[index].string_list_data[0].href);
-  }
-}
+//   followingLink.push(
+//     iFollow.relationships_following[index].string_list_data[0].href
+//   );
+// }
+// for (let index = 0; index < followersLength; index++) {
+//   followers.push(followMe[index].string_list_data[0].value);
+//   followersLink.push(followMe[index].string_list_data[0].href);
+//   }
+// }
 
 function compare() {
   // extraction();
@@ -93,20 +108,30 @@ function compare() {
   for (let index = 0; index < followingLength; index++) {
     if (!followers.includes(following[index])) {
       notFollowingBack.push(following[index]);
-      notFollowingBackLink.push(followingLink[index])
+      notFollowingBackLink.push(followingLink[index]);
     }
   }
   // for (let index = 0; index < notFollowingBack.length; index++) {
   //   document.getElementById("unfollowers-list").innerHTML = notFollowingBack[index];
   //   document.getElementById("unfollowers-list-link").innerHTML = notFollowingBackLink[index];
-    
+
   // }
-  var l  = "Click the link to Unfollow <br>";
+  var l =
+    notFollowingBack.length +
+    " Instagram User do not follow you back <br><br>Click the link to Unfollow <br><br>";
   for (let index = 0; index < notFollowingBack.length; index++) {
-    
-    l = l + ( "<a href="+notFollowingBackLink[index]+" target="+ "_blank> "+notFollowingBack[index]+" </a> <br>");  
-  } 
+    l =
+      l +
+      ("<a href=" +
+        notFollowingBackLink[index] +
+        " target=" +
+        "_blank> " +
+        notFollowingBack[index] +
+        " </a> <br>");
+  }
   document.getElementById("unfollowers-list").innerHTML =
-    l + "<br>Reload to check again, thanks for testing the app ";
-  
+    l + "<br><br>Reload to check again, thanks for testing the website <br>";
+
+  // document.getElementById("unfollowers-list").innerHTML =
+  //   '<button type="button" onClick="window.location.reload()">Reload</button>';
 }
