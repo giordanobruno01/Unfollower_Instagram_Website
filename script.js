@@ -118,7 +118,8 @@ function compare() {
   var l2 = "";
   
 
-   c = notFollowingBack.length +" Instagram users do not follow you back <br><br>Click the link to Unfollow them<br><br>";
+   c = notFollowingBack.length +" Instagram users do not follow you back <br><br>";
+   unf = 'Click the link to Unfollow them <br>'
   for (let index = 0; index < (notFollowingBack.length)/2; index++) {
     l1 =
       l1 +
@@ -144,6 +145,7 @@ function compare() {
  
   
   document.getElementById("count").innerHTML = c
+  document.getElementById("unf").innerHTML = unf;
     document.getElementById("unfollowers-listLeft").innerHTML = l1
     document.getElementById("unfollowers-listRight").innerHTML = l2
     document.getElementById("final").innerHTML = d
