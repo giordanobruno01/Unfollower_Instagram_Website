@@ -18,20 +18,25 @@ body {
   justify-content: center;
   align-items: center;
 }
+#stepsvideo {
+  background-color: red;
+
+  width: 267px;
+  margin: 100px auto 100px auto;
+}
 iframe {
-  width: fit-content;
+  /* width:560px;
+   height:315px; */
+  width: 267px;
 }
 
 #fileUpload {
-  
   width: 300px;
   padding: 20px;
   margin: 20px auto 30px auto;
   margin-bottom: 30px;
   text-align: center;
   border: 1px dotted black;
-  
-
 }
 div > label {
   margin-bottom: 10px;
@@ -40,7 +45,6 @@ div > label {
 div > input {
   width: 100%;
   padding-left: 10%;
-  
 }
 
 #following,
@@ -78,6 +82,11 @@ footer {
   padding: 5px;
   width: 100%;
   margin-top: auto;
+}
+#footer {
+  background-color: rgba(185, 212, 212, 0.221);
+  padding: 5px;
+  width: 100%;
 }
 footer > div {
   text-align: center;
