@@ -9,18 +9,17 @@ var followingLength;
 
 function checkExt(event) {
   const file = event.target.files[0];
- const fileName = document.getElementById('followers');
- 
+  const fileName = document.getElementById("followers");
+
   if (file.type !== "application/json") {
     alert(
       "Only JSON files are supported. It is recommended to download from Instagram a .json file."
     );
+    console.log(fileName.value);
     fileName.value = "";
+
     return;
-  } else if (
-    file.name != "followers_1.json" &&
-    file.name != "following.json"
-  ) {
+  } else if (file.name != "followers_1.json" && file.name != "following.json") {
     alert(
       "Only files named as following.json or followers_1.json allowed, check again."
     );
@@ -60,7 +59,7 @@ const readJsonFile = (file) => {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.readAsText(file);
-    
+
     reader.onload = (readerevent) => {
       try {
         const content = readerevent.target.result;
@@ -95,7 +94,6 @@ const readJsonFile = (file) => {
 // }
 
 function compare() {
-  
   var notFollowingBack = [];
   var notFollowingBackLink = [];
 
@@ -105,9 +103,9 @@ function compare() {
       notFollowingBackLink.push(followingLink[index]);
     }
   }
-  if(notFollowingBack.length==0){
+  if (notFollowingBack.length == 0) {
     document.getElementById("count").innerHTML =
-      "The files are not matching, check if they are correct as following <strong>following.json<storng> or <strong>followers_1.json<strong>";
+      "The files are not matching, check if they are correct as following <strong>following.json<strong> and <strong>followers_1.json<strong>, both cannot have the same name";
     return;
   }
   // for (let index = 0; index < notFollowingBack.length; index++) {
@@ -139,8 +137,12 @@ function compare() {
   ) {
     l2 =
       l2 +
-      ("<a href=" + notFollowingBackLink[index] + " target=" + "_blank> " +
-        notFollowingBack[index] + " </a> <br>");
+      ("<a href=" +
+        notFollowingBackLink[index] +
+        " target=" +
+        "_blank> " +
+        notFollowingBack[index] +
+        " </a> <br>");
   }
   d = "<br>Reload to check again, thanks for testing the website <br>";
 
