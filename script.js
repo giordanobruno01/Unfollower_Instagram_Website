@@ -3,28 +3,38 @@ var followMe;
 var following = [];
 var followers = [];
 var followingLink = [];
-var followersLink = [];
+var followersLink = []; 
 var followersLength;
 var followingLength;
 
 function checkExt(event) {
   const file = event.target.files[0];
-  const fileName = document.getElementById("followers");
+ 
+ const fileName1 = document.getElementById("followers");
+ const fileName2 = document.getElementById("following");
 
+ console.log("type", file.type , fileName1.value,"and", fileName2.value);
+ console.log()
   if (file.type !== "application/json") {
+    //not working this
     alert(
       "Only JSON files are supported. It is recommended to download from Instagram a .json file."
     );
-    console.log("input 1", fileName.value);
-    fileName.value = "";
-
+    
+    fileName1.value = "";
+    fileName2.value = "";
     return;
+
   } else if (file.name != "followers_1.json" && file.name != "following.json") {
     alert(
       "Only files named as following.json or followers_1.json allowed, check again."
     );
-    console.log("input 2", fileName.value);
-    fileName.value = "";
+    if (file.name != "followers_1.json"){
+      fileName1.value = "";
+    }else if (file.name != "following.json") {
+      fileName2.value = "";
+    }
+
     return;
   } else {
     readJsonFile(file)
@@ -55,6 +65,7 @@ function checkExt(event) {
       });
   }
 }
+
 
 const readJsonFile = (file) => {
   return new Promise((resolve, reject) => {
@@ -93,6 +104,13 @@ const readJsonFile = (file) => {
 //   followersLink.push(followMe[index].string_list_data[0].href);
 //   }
 // }
+
+function fileIncorrect(){
+   const fileName1 = document.getElementById("followers");
+   const fileName2 = document.getElementById("following");
+
+  
+}
 
 function compare() {
   var notFollowingBack = [];
@@ -157,6 +175,7 @@ function compare() {
   document.getElementById("unfollowers-listLeft").innerHTML = l1;
   document.getElementById("unfollowers-listRight").innerHTML = l2;
   document.getElementById("final").innerHTML = d;
+
 
   // document.getElementById("unfollowers-list").innerHTML =
   //   '<button type="button" onClick="window.location.reload()">Reload</button>';
