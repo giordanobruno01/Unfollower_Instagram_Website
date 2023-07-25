@@ -7,7 +7,6 @@ main {
 }
 body {
   background-color: rgba(128, 128, 128, 0.106);
-  
 }
 
 #youtube {
@@ -40,6 +39,7 @@ div > label {
   margin-bottom: 10px;
   background-color: antiquewhite;
 }
+
 div > input {
   width: 100%;
   padding-left: 5%;
@@ -54,6 +54,10 @@ div > input {
 #result-box {
   text-align: center;
   padding: 20px;
+}
+#final {
+  display: block;
+  margin-top: 50px;
 }
 #unfollowers-listLeft {
   margin: 1px solid black;
@@ -104,3 +108,4 @@ footer > div {
 }
 @media only screen and (max-width: 600px) {
 }
+/* from this line below is the style for Steps page only */

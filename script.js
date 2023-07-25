@@ -15,7 +15,7 @@ function checkExt(event) {
     alert(
       "Only JSON files are supported. It is recommended to download from Instagram a .json file."
     );
-    console.log(fileName.value);
+    console.log("input 1", fileName.value);
     fileName.value = "";
 
     return;
@@ -23,6 +23,7 @@ function checkExt(event) {
     alert(
       "Only files named as following.json or followers_1.json allowed, check again."
     );
+    console.log("input 2", fileName.value);
     fileName.value = "";
     return;
   } else {
@@ -135,7 +136,8 @@ function compare() {
     index < notFollowingBack.length;
     index++
   ) {
-    l2 =
+    if (notFollowingBack.length> 1) {
+      l2 =
       l2 +
       ("<a href=" +
         notFollowingBackLink[index] +
@@ -143,6 +145,10 @@ function compare() {
         "_blank> " +
         notFollowingBack[index] +
         " </a> <br>");
+    }else{
+      console.log("hello")
+    }
+    
   }
   d = "<br>Reload to check again, thanks for testing the website <br>";
 
