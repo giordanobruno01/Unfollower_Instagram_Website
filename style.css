@@ -5,6 +5,14 @@ main {
   margin: auto;
   padding: 10px;
 }
+.navbar-brand{
+  background-color: rgba(255, 192, 203, 0.211);
+  width: 75vw;
+  text-align: center;
+}
+.collapse{
+  background-color: rgba(255, 192, 203, 0.211);
+}
 body {
   background-color: rgba(128, 128, 128, 0.106);
 }
@@ -25,6 +33,7 @@ iframe {
   width: 300px;
   padding: 20px;
   margin: 20px auto 30px auto;
+  background-color: aliceblue;
   margin-bottom: 30px;
   text-align: center;
   border: 1px dotted black;
