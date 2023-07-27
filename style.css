@@ -49,12 +49,9 @@ div > input {
   text-align: center;
   padding: 20px;
 }
-#final {
-  display: block;
-  margin-top: 50px;
-}
+
 #unfollowers-listLeft {
-  margin: 1px solid black;
+  
   display: block;
   width: 50%;
   float: left;
@@ -63,16 +60,19 @@ div > input {
   padding-bottom: 30px;
 }
 #unfollowers-listRight {
-  margin: 1px solid black;
+
   display: block;
   float: right;
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-
   padding-bottom: 30px;
 }
-
+#final {
+  display: inline-block;
+  width: 100%;
+  
+}
 footer {
   background-color: rgba(185, 212, 212, 0.221);
   padding: 5px;

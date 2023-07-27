@@ -171,7 +171,7 @@ function compare() {
     "  ",
     notFollowingBack
   );
-  d = "<br>Reload to check again, thanks for testing the website <br>";
+  d = "Reload to check another files , thanks for testing the website";
 
   document.getElementById("count").innerHTML = c;
   document.getElementById("unf").innerHTML = unf;
