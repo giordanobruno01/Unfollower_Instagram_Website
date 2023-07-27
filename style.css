@@ -51,7 +51,6 @@ div > input {
 }
 
 #unfollowers-listLeft {
-  
   display: block;
   width: 50%;
   float: left;
@@ -60,7 +59,6 @@ div > input {
   padding-bottom: 30px;
 }
 #unfollowers-listRight {
-
   display: block;
   float: right;
   width: 50%;
@@ -71,7 +69,6 @@ div > input {
 #final {
   display: inline-block;
   padding: 20px;
-  
 }
 footer {
   background-color: rgba(185, 212, 212, 0.221);
@@ -105,7 +102,6 @@ footer > div {
 /* from this line below is the style for Steps page only */
 
 #stepsvideo {
-  
   background-color: rgb(0, 0, 0);
   margin: 100px 20px 100px 20px;
   position: relative;
@@ -114,14 +110,18 @@ footer > div {
 }
 iframe {
   position: absolute;
-  top:2%;
+  top: 2%;
   left: 2%;
-  
+
   width: 96%;
   height: 95%;
+}
+#unfollowers-listLeft > a:visited,
+#unfollowers-listRight > a:visited {
+  color: rgb(248, 167, 181);
+  text-decoration: none;
 }
 /* #test{
   padding: 20px;
   border: 1px solid black;
-  
 } */

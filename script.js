@@ -11,7 +11,8 @@ var followingLength;
 //   // const text = document.getElementById("test").textContent;
 //   // console.log(text);
 //   document.getElementById("test").textContent = "";
-//   console.log("test");
+//   document.getElementById("test").tagName = "";
+//   console.log();
 // }
 
 function checkExt(event) {
