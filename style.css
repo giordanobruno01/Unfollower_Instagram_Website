@@ -70,7 +70,7 @@ div > input {
 }
 #final {
   display: inline-block;
-  width: 100%;
+  padding: 20px;
   
 }
 footer {
@@ -119,6 +119,9 @@ iframe {
   
   width: 96%;
   height: 95%;
-  
-  
 }
+/* #test{
+  padding: 20px;
+  border: 1px solid black;
+  
+} */

@@ -7,14 +7,19 @@ var followersLink = [];
 var followersLength;
 var followingLength;
 
+// function test(val){
+//   // const text = document.getElementById("test").textContent;
+//   // console.log(text);
+//   document.getElementById("test").textContent = "";
+//   console.log("test");
+// }
+
 function checkExt(event) {
   const file = event.target.files[0];
 
   const fileName1 = document.getElementById("followers");
   const fileName2 = document.getElementById("following");
 
-  console.log("type", file.type, fileName1.value, "and", fileName2.value);
-  console.log();
   if (file.type !== "application/json") {
     //not working this
     alert(
@@ -120,7 +125,7 @@ function compare() {
   }
   if (notFollowingBack.length == 0) {
     document.getElementById("count").innerHTML =
-      "The files are not matching, check if they are correct as following <strong>following.json<strong> and <strong>followers_1.json<strong>, both cannot have the same name";
+      "The files are not correct, one needs to be <strong>following.json</strong> and the other <strong>followers_1.json</strong>, both cannot have the same name<br>if the error persist try to download again from Instagram";
     return;
   }
   // for (let index = 0; index < notFollowingBack.length; index++) {
@@ -165,13 +170,8 @@ function compare() {
     }
   }
 
-  console.log(
-    "notffl lenght ",
-    notFollowingBack.length,
-    "  ",
-    notFollowingBack
-  );
-  d = "Reload to check another files , thanks for testing the website";
+  d =
+    "Reload to check another files<br>To update the list of users you need to download again the json files from Instagram and upload here again<br>Thanks for testing the website";
 
   document.getElementById("count").innerHTML = c;
   document.getElementById("unf").innerHTML = unf;
