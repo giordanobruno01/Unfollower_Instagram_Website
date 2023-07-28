@@ -142,7 +142,7 @@ function compare() {
     " Instagram users do not follow you back <br><br>";
   unf = "Click the link to Unfollow them <br>";
   for (let index = 0; index < notFollowingBack.length / 2; index++) {
-    console.log("list " + index + " " + notFollowingBack[index]);
+    console.log(index, " ", notFollowingBack[index]);
     l1 =
       l1 +
       ("<a href=" +
@@ -157,9 +157,9 @@ function compare() {
     index < notFollowingBack.length;
     index++
   ) {
-    console.log("list " + index + " ", notFollowingBack[index]);
-
     if (notFollowingBack.length > 1) {
+
+      console.log( index, " ",notFollowingBack[index]);
       l2 =
         l2 +
         ("<a href=" +
