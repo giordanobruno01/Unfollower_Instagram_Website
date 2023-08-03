@@ -153,7 +153,7 @@ function compare() {
     index < notFollowingBack.length;
     index++
   ) {
-    if (notFollowingBack.length > 1) {
+    if (notFollowingBack.length > 1) { 
       console.log(index, " ", notFollowingBack[index]);
       l2 =
         l2 +
