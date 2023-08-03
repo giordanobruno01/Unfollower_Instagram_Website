@@ -145,12 +145,8 @@ function compare() {
     console.log(index, " ", notFollowingBack[index]);
     l1 =
       l1 +
-      ("<a href=" +
-        notFollowingBackLink[index] +
-        " target=" +
-        "_blank> " +
-        notFollowingBack[index] +
-        " </a> <br>");
+      `<a href= ${notFollowingBackLink[index]} target= "_blank"> 
+        ${notFollowingBack[index]}</a> <br>`;
   }
   for (
     let index = (notFollowingBack.length / 2).toFixed(0);
@@ -158,16 +154,12 @@ function compare() {
     index++
   ) {
     if (notFollowingBack.length > 1) {
-
-      console.log( index, " ",notFollowingBack[index]);
+      console.log(index, " ", notFollowingBack[index]);
       l2 =
         l2 +
-        ("<a href=" +
-          notFollowingBackLink[index] +
-          " target=" +
-          "_blank> " +
-          notFollowingBack[index] +
-          " </a> <br>");
+        `<a href=
+          ${notFollowingBackLink[index]} target= "_blank"> 
+          ${notFollowingBack[index]} </a> <br>`;
     }
   }
 
