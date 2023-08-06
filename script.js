@@ -45,6 +45,7 @@ function checkExt(event) {
     readJsonFile(file)
       .then((jsonData) => {
         if (file["name"] == "followers_1.json") {
+
           followMe = jsonData;
           followersLength = followMe.length;
           for (let index = 0; index < followersLength; index++) {
@@ -53,6 +54,7 @@ function checkExt(event) {
           }
         }
         if (file["name"] == "following.json") {
+          
           iFollow = jsonData;
           followingLength = iFollow.relationships_following.length;
           for (let index = 0; index < followingLength; index++) {
@@ -145,6 +147,7 @@ function compare() {
     console.log(index, " ", notFollowingBack[index]);
     l1 =
       l1 +
+      
       `<a href= ${notFollowingBackLink[index]} target= "_blank"> 
         ${notFollowingBack[index]}</a> <br>`;
   }
