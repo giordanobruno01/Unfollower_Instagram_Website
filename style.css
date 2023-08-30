@@ -51,10 +51,17 @@ div > input {
 }
 
 #following,
-#followers {
+#followers ,
+#zipFileInput{
   display: block;
   margin-bottom: 30px;
 }
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
 
 #result-box {
   text-align: center;

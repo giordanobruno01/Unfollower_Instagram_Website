@@ -162,7 +162,7 @@ function compare() {
   }
   if (notFollowingBack.length == 0) {
     document.getElementById("count").innerHTML =
-      "The files are not correct, one needs to be <strong>following.json</strong> and the other <strong>followers_1.json</strong>, both cannot have the same name<br>if the error persist try to download again from Instagram";
+      "The files are not correct, one needs to be <strong>following.json</strong> and the other <strong>followers_1.json</strong>, if the error persist try to download again from Instagram";
     return;
   }
 

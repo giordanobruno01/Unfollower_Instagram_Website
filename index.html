@@ -49,7 +49,10 @@
     <main>
 
         <div id="youtube">
-            <h2 style="text-align: center;">Steps how to download the followers and following file from Instagram</h2>
+            <h3 style="margin:20px; animation: blinker 1.5s linear infinite;
+                            color: red;
+                            font-family: sans-serif; text-align: center;">Update - Now you can Upload the entire Zip File, no need to extract </h3>
+            <h2 style="text-align: center;">Steps how to download Zip File from Instagram</h2>
             <ol>
                 <li>Open <a href="http://instagram.com" target="_blank">Instagram </a> on website or app</li>
                 <li>Go to your profile and click on 3 lines =</li>
@@ -65,41 +68,26 @@
                 <li>it might take a few minutes but instagram will send you a link when the file is ready, after that
                     just
                     download the .ZIP file</li>
-                <li>Unzip the .zip file you downloaded and in the folder you can see both "followers_1.json" and
-                    "following.json"</li>
-                <li>Now it is time to upload both files in the box below, click Choose file and select from the folder
-                    in your phone </li>
-                <li>When both files are selected (one in each input field) click in the button Check Unfollowers</li>
+
             </ol>
 
-            <aside>PS: Downloading JSON format is crutial so do not pick HTML, pick the json files that are inside the
-                folder
-                after you extract, you can discard the .zip file you downloaded from Instagram</aside>
+            <aside> PS: Choosing JSON format is crutial so do not pick HTML</aside>
+            <aside> PS2: If you still want to use old method extracting the files from ZIP FILE and uploading separately click <a href="steps.html">here</a> or open <strong>STEPS </strong>tab</aside>
+           
+
             <div id="clickYoutube"><a href="https://youtu.be/nkpma_EiUlk" target="_blank">Click Here for tutorial in
                     video</a></div>
 
         </div>
 
-
         <div id="fileUpload">
-            <!-- <input type="file" onchange="convertetFollowers()" name="followers" id=""> -->
-            <label for="followers">followers_1.json</label>
-            <input type="file" id="followers" name="followers" onchange="checkExt(event)">
-
-            <label for="following">following.json</label>
-            <input type="file" id="following" name="following" onchange="checkExt(event)">
-            <button onclick="compare()">Check Unfollowers</button>
-
-        </div>
-        <div id="fileUpload">
+            <label for="zipFileInput">Zip File Here</label>
             <input type="file" id="zipFileInput" onchange="unzip(this.files)">
+
             <button onclick="compare()">Check Unfollowers</button>
-            <!-- <button id="unzipButton">Unzip</button> -->
-            <!-- <label for="zipFile">zip file</label>
-            <input type="file" id="zipFile" name="zipFile" onchange="checkExt(event)">
-            <button onclick="extractZip()">Unzip and Check Unfollowers</button> -->
+
         </div>
-        <!-- <a href="google.com" id="test"target="_blank" onclick="test()">click test</a> -->
+       
 
         <div id="result-box">
 
