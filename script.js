@@ -17,19 +17,53 @@ function unzip(files) {
       var filePromises = [];
 
       Object.keys(zip.files).forEach(function (filename) {
-        var file = zip.files[filename];
-        console.log(filename.split("/")[1])
-        
-        if (!file.dir) {
-          filePromises.push(
-            file.async("blob").then(function (blob) {
-              var a = document.createElement("a");
-              a.href = window.URL.createObjectURL(blob);
-              a.download = filename;
-              // a.click();
-              
-            })
-          );
+        var file;
+
+        if (filename.split("/")[1] == "following.json") {
+          //
+          file = zip.files[filename];
+          if (!file.dir) {
+            filePromises.push(
+              file.async("blob").then(async function (blob) {
+                // var a = document.createElement("a");
+                // a.href = window.URL.createObjectURL(blob);
+                // a.download = filename;
+                // a.click();
+                iFollow = JSON.parse(await blob.text())
+                followingLength = iFollow.relationships_following.length;
+                for (let index = 0; index < followingLength; index++) {
+                  following.push(
+                    iFollow.relationships_following[index].string_list_data[0]
+                      .value
+                  );
+                  followingLink.push(
+                    iFollow.relationships_following[index].string_list_data[0]
+                      .href
+                  );
+                }
+                // console.log(JSON.parse(await blob.text()));
+              })
+            );
+          }
+        }
+        if (filename.split("/")[1] == "followers_1.json") {
+          //
+          file = zip.files[filename];
+          if (!file.dir) {
+            filePromises.push(
+              file.async("blob").then(async function (blob) {
+                
+                followMe = JSON.parse(await blob.text())
+                followersLength = followMe.length;
+                for (let index = 0; index < followersLength; index++) {
+                  followers.push(followMe[index].string_list_data[0].value);
+                  followersLink.push(followMe[index].string_list_data[0].href);
+                }
+
+                // console.log(JSON.parse(await blob.text()));
+              })
+            );
+          }
         }
       });
     });
