@@ -29,7 +29,8 @@ function unzip(files) {
                 // a.href = window.URL.createObjectURL(blob);
                 // a.download = filename;
                 // a.click();
-                iFollow = JSON.parse(await blob.text())
+                iFollow = JSON.parse(await blob.text());
+                console.log(typeof iFollow);
                 followingLength = iFollow.relationships_following.length;
                 for (let index = 0; index < followingLength; index++) {
                   following.push(
@@ -52,8 +53,7 @@ function unzip(files) {
           if (!file.dir) {
             filePromises.push(
               file.async("blob").then(async function (blob) {
-                
-                followMe = JSON.parse(await blob.text())
+                followMe = JSON.parse(await blob.text());
                 followersLength = followMe.length;
                 for (let index = 0; index < followersLength; index++) {
                   followers.push(followMe[index].string_list_data[0].value);
@@ -149,8 +149,22 @@ function fileIncorrect() {
   const fileName1 = document.getElementById("followers");
   const fileName2 = document.getElementById("following");
 }
-
+function checkFunction() {
+  var checkbox = document.getElementById("chk").checked;
+  if (checkbox) {
+    alert("Checkbox is Checked!");
+  } else {
+    alert("Checkbox is not Checked!");
+  }
+}
 function compare() {
+  var checkbox = document.getElementById("chk").checked;
+
+  if (!checkbox) {
+    alert("Read instructions");
+    return
+  } 
+
   var notFollowingBack = [];
   var notFollowingBackLink = [];
 
