@@ -49,7 +49,8 @@
 
         </div>
         <div id="steps">
-            <h2 style="text-align: center;">Steps how to download the followers and following file from Instagram (Old method)</h2>
+            <h2 style="text-align: center;">Steps how to download the followers and following file from Instagram (Old
+                method)</h2>
             <ol>
                 <li>Open <a href="http://instagram.com" target="_blank">Instagram </a> on website or app</li>
                 <li>Go to your profile and click on 3 lines =</li>
@@ -77,17 +78,21 @@
                 after you extract, you can discard the .zip file you downloaded from Instagram</aside>
         </div>
         <div id="fileUpload">
-           
+
             <label for="followers">followers_1.json</label>
             <input type="file" id="followers" name="followers" onchange="checkExt(event)">
 
             <label for="following">following.json</label>
             <input type="file" id="following" name="following" onchange="checkExt(event)">
+            <label class="container">
+                <input type="checkbox" id='chk'>
+                Select if you read instruction
+            </label>
             <button onclick="compare()">Check Unfollowers</button>
 
         </div>
 
-       
+
 
         <div id="result-box">
 
