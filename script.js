@@ -162,8 +162,8 @@ function compare() {
 
   if (!checkbox) {
     alert("Read instructions");
-    return
-  } 
+    return;
+  }
 
   var notFollowingBack = [];
   var notFollowingBackLink = [];
