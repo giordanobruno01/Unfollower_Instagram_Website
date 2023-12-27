@@ -18,7 +18,7 @@ function unzip(files) {
 
       Object.keys(zip.files).forEach(function (filename) {
         var file;
-        console.log(filename)
+        
 
         if (
           filename.split("connections/followers_and_following/")[1] ==
@@ -51,7 +51,10 @@ function unzip(files) {
             );
           }
         }
-        if (filename.split("/")[1] == "followers_1.json") {
+        if (
+          filename.split("connections/followers_and_following/")[1] ==
+          "followers_1.json"
+        ) {
           //
           file = zip.files[filename];
           if (!file.dir) {
