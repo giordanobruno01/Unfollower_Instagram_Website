@@ -18,8 +18,12 @@ function unzip(files) {
 
       Object.keys(zip.files).forEach(function (filename) {
         var file;
+        console.log(filename)
 
-        if (filename.split("/")[1] == "following.json") {
+        if (
+          filename.split("connections/followers_and_following/")[1] ==
+          "following.json"
+        ) {
           //
           file = zip.files[filename];
           if (!file.dir) {
