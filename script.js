@@ -66,7 +66,6 @@ function unzip(files) {
                   followers.push(followMe[index].string_list_data[0].value);
                   followersLink.push(followMe[index].string_list_data[0].href);
                 }
-
                 // console.log(JSON.parse(await blob.text()));
               })
             );
